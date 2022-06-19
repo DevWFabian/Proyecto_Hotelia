@@ -1,17 +1,14 @@
 :root{
     --width: 250px;
     --padding: 10px;
-    --bgcolor: rgb(52, 52, 52);
-    --hovercolor: rgb(23, 23, 23);
-    --width-collapsed: 50px;
     --margin-top-header: 15vh;
 }
 #main-container{
+    padding-left: 5vw;
     border: none;
     height: auto;
     color: rgb(0, 0, 0);
-    margin:var(--margin-top-header) ;
-    padding: 10vh 10vh;
+    margin-top:calc(var(--margin-top-header) + 5vh) ;
 }
 #main-container #principal-title{
     display: flex;
@@ -20,6 +17,8 @@
     margin-bottom: 25px;
 }
 #main-container #principal-title .title{
+    padding-left: var(--padding);
+    font-weight: 700;
     font-size: 35px;
     right: 0;
 }
@@ -30,36 +29,44 @@
 }
 #main-container .principal-container .option-container{
     display: flex;
-    flex-flow: column wrap;
-    flex-direction: column;
-    /* justify-content: space-between; */
+    flex-flow: row wrap;
+    justify-content: space-between;
     margin: 15px;
     height: 100%;
-    width: 200px;
+    width: var(--width);
     border-radius: 25px;
     box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.89);
     padding: var(--padding);
-    background-color: aqua;
+    background-color: #00C3EB;
+    transition: width 2s, height 4s;
+    font-weight: 800;
 }
 #main-container .principal-container .option-container:hover{
-    color: transparent;
-    height: 82px;
+    font-size: 20px;
+    transform: translate(0px , 2px);
+}
+#main-container .principal-container .option-container:active{
+    transform: translateZ(2px);
 }
 #main-container .principal-container .option-container span{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    align-items: flex-end;
-    width: 100%;
+    align-items: center;
+    width: 60%;
     height: auto;
     border: none;
+    cursor: pointer;
 }
 #main-container .principal-container .option-container img{
     display: flex;
+    margin-left: 3%;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    width: 100%;
- 
-
+    width: 35%;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.349);
+    cursor: pointer;
+    border: none;
 }
