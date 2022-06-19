@@ -1,0 +1,44 @@
+:root{
+    --width: 250px;
+    --padding: 10px;
+    --bgcolor: rgb(52, 52, 52);
+    --hovercolor: rgb(23, 23, 23);
+    --width-collapsed: 50px;
+    --margin-top-header: 15vh;
+}
+#main-container{
+    border: none;
+    height: auto;
+    color: rgb(0, 0, 0);
+    margin:var(--margin-top-header) ;
+    padding: 10vh 10vh;
+    text-align: end;
+}
+#main-container #principal-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 25px;
+}
+#main-container #principal-title .title{
+    font-size: 35px;
+    right: 0;
+}
+#main-container .principal-container{
+    display: flex;
+    flex-flow: row wrap;
+    border: none;
+    text-align: center;
+}
+#main-container .principal-container .option-container{
+    margin: 15px;
+    height: 80px;
+    width: 200px;
+    border-radius: 25px;
+    box-shadow: 2px 2px 5px 3px rgba(0, 0, 0, 0.89);
+    padding: var(--padding);
+}
+#main-container .principal-container .option-container:hover{
+    height: 82px;
+}

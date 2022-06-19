@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/barra_desplegable.css">
-    <title>Hotelia</title>
+    <link rel="stylesheet" href="../CSS/inicioEncargado.css">
+    <title>Gestionar Hotel</title>
 </head>
 
 <body>
@@ -24,34 +25,49 @@
         </div>
         <!-- perfil -->
         <div id="profile">
-            <div id="photo"></div>
-            <div id="name"><span>nombre_usuario</span></div>
+            <div id="photo"><img src="../imagenes/panda.jpg" alt="imagen_usuario_panda"></div>
+            <div id="name"><span>PANDA</span></div>
         </div>
         <!-- Items -->
         <div id="menu-items">
             <div class="item">
                 <a href="#">
-                    <div class="icon"></div>
-                    <div class="title"><span>Perfil</span></div>
+                    <div class="icon"><img src="../imagenes/perfil.png" alt="icono_perfil"></div>
+                    <div class="title"><span>PERFIL</span></div>
                 </a>
             </div>
             <div class="item separator"></div>
             <div class="item">
                 <a href="#">
-                    <div class="icon"></div>
-                    <div class="title"><span>Perfil</span></div>
+                    <div class="icon"><img src="../imagenes/hotel_icon.png" alt="icono_hotel"></div>
+                    <div class="title"><span>GESTIONAR HOTELES</span></div>
                 </a>
             </div>
+            <div class="item separator"></div>
+            <div class="item">
+                <a href="#">
+                    <div class="icon"><img src="../imagenes/Log_Out.png" alt="icono_log_out"></div>
+                    <div class="title"><span>CERRAR SESION</span></div>
+                </a>
+            </div>
+            <div class="item separator"></div>
         </div>
     </section>
 
     <section id="main-container">
-        <h1>hola mucndo</h1>
+        <div id="principal-title"> 
+            <div class="title"><span>Pagina Principal</span></div>
+        </div>
+        <div class=" principal-container">
+            <div class="option-container"><span>Agregar Descuentos</span></div>
+            <div class="option-container"><span>Generar Reporte</span></div>
+            <div class="option-container"><span>Opiniones</span></div>
+        </div>
     </section>
-    <footer>
-
+    <footer id="pie_pagina">
+        <div class="title"><span>2022 © Hotelia</span></div>
     </footer>
 </body>
 
 </html>
-<script type="text/javascript" src="../js/sidemenu.js"></script>
+<script type="text/javascript" src="../js/barra_desplegable.js"></script>
