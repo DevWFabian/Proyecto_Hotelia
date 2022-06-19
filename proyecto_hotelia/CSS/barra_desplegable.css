@@ -23,7 +23,6 @@ body {
 #sidemenu {
     background-color: var(--bgcolor);
     color: white;
-    margin-top: var(--margin-top-header);
     position: fixed;
     height: 100%;
     left: 0;

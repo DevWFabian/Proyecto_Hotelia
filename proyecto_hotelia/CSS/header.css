@@ -1,0 +1,65 @@
+/*ESTE ESPACIO ES LA CABECERA*/
+header{
+    background-color: #e0dff1;
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    top: 0;
+}
+#seccion_cabecera{
+    overflow: hidden;
+    background-color: #00C3EB;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;    
+    justify-items: center;
+    box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.89);;
+}
+#seccion_cabecera #barra_navegacion_superior{
+    overflow: hidden;
+    display: flex;
+    flex-flow: row wrap;
+
+}
+.barra_nav_collapsed{
+    padding-left: 250px;
+    width: calc(100vw - var(--width-collapsed));
+
+}
+.barra_nav_expanded{
+    padding-left: 50px;
+    width: calc(100vw - var(--width));
+}
+#seccion_cabecera #barra_navegacion_superior a{
+    text-decoration: none;
+}
+#seccion_cabecera #barra_navegacion_superior #logo_titulo_superior {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 150px;
+}
+#seccion_cabecera #barra_navegacion_superior #logo_titulo_superior #logo_principal{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100px;
+}
+#seccion_cabecera #barra_navegacion_superior #logo_titulo_superior img{
+    width: 60px;
+}
+#seccion_cabecera #barra_navegacion_superior .boton_navegacion_barra_superior{
+    font-size: 15px;
+    color: white;
+    font-weight: 700;
+    background-color: #00C3EB;
+    border: none;
+    padding: 0px 25px;
+    height: 55px;
+    margin: 0;
+
+}
+#seccion_cabecera #barra_navegacion_superior .boton_navegacion_barra_superior:hover, 
+#seccion_cabecera #barra_navegacion_superior .boton_navegacion_barra_superior:active{
+    background-color: rgba(0, 0, 0, 0.267);
+}
