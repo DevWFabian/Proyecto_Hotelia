@@ -6,12 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/barra_desplegable.css">
+    <link rel="stylesheet" href="../CSS/header.css">
     <title>Inicio</title>
 </head>
 
 <body>
-    <header>
+    <header class="header">
+        <section id="seccion_cabecera">
+            <nav id="barra_navegacion_superior" class="barra_nav_collapsed">
+                <a href="#hotelia"><button class="boton_navegacion_barra_superior">HOTELIA</button></a>
+                <a href="#sobre_nosotros"><button class="boton_navegacion_barra_superior">SOBRE NOSOTROS</button></a>
+                <div id="logo_titulo_superior">
+                    <a href="index.html" id="logo_principal"><img src="../imagenes/LogoSolo.png" alt="logo_imagen"></a>
+                </div>
+                <a href="#recomendados"><button class="boton_navegacion_barra_superior">RECOMENDADOS</button></a>
+                <a href="#porque_hotelia"><button class="boton_navegacion_barra_superior">¿PORQUE HOTELIA?</button></a>
 
+            </nav>
+        </section>
     </header>
     <section id="sidemenu" class="menu-collapsed">
         <div id="header">
@@ -37,7 +49,7 @@
             <div class="item">
                 <a href="#">
                     <div class="icon"><img src="../imagenes/hotel_icon.png" alt="icono_hotel"></div>
-                    <div class="title"><span>MIS RESERVAS</span></div>
+                    <div class="title"><span>GESTIONAR RESERVAS</span></div>
                 </a>
             </div>
             <div class="item separator"></div>
@@ -50,12 +62,8 @@
             <div class="item separator"></div>
         </div>
     </section>
-
-    <section id="main-container">
-        <h1>hola mucndo</h1>
-    </section>
     <footer id="pie_pagina">
-        <div class="title" ><span>2022 © Hotelia</span></div>
+        <div class="title"><span>2022 © Hotelia</span></div>
     </footer>
 </body>
 
