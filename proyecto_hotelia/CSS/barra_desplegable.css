@@ -197,14 +197,16 @@ body {
 footer {
     position: fixed;
     background-color: var(--bgcolor);
-    text-align: center;
+    display: flex;
+    justify-content: center;
     padding-top: 5px;
     bottom: 0;
-    width: calc(100vw - var(--width-collapsed));
     height: 4vh;
     color: white;
 }
-
-.pie_pagina_expanded {
+.pie_pagina_collapsed{
+    width: calc(100vw - var(--width-collapsed));
+}
+.pie_pagina_expanded{
     width: calc(100vw - var(--width));
 }
