@@ -1,0 +1,88 @@
+/*ESTE ESPACIO ES DE REGISTRO*/
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    background-image:url("../imagenes/fondo-login.jpg");
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.container{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    height: 100vh;
+    }
+.container_form{
+    background-color:#0a1e35;
+    border-radius:15px;
+    padding:40px;
+    opacity: 0.9;
+}
+.login{
+    
+    height:100px;
+    margin-left: 110px;
+}
+h2{
+    text-align: center;
+    color: white;
+}
+input{
+    display: block;
+    width: 500px;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 0 15px;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: white;
+    border-bottom: 2px solid white;
+}
+.ckeck{
+    width: 15px;
+    height: 15px;
+    display: inline;
+}
+label{
+    color: white;
+}
+.login-space{
+    color: white;
+    text-decoration: none;
+    margin-left: 45px;
+}
+.login-space:hover{
+    color:#b8b8b8b8;}
+.boton-login{
+    width: 170px;
+    border-radius: 15px;
+    background-color: #048620;
+    color: white;
+    margin-top: 30px;
+    border: none;
+    border-bottom: 4px solid  #0b5a1c;
+    margin-left:160px;
+}
+label:hover{
+    color:#b8b8b8b8;
+}
+.boton-login:active{
+    background-color:#0b5a1c;
+    width: 175px;
+}
+.boton-login:hover{
+    width: 170px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    color: #048620;
+    margin-top: 30px;
+    border: none;
+    border-bottom: 4px solid  #0b5a1c;
+    margin-left:165px; 
+}
