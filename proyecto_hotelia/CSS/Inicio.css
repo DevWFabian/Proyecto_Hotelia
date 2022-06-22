@@ -1,0 +1,99 @@
+:root {
+    --width: 250px;
+    --padding: 10px;
+    --width-collapsed: 50px;
+    --margin-top-header: 13vh;
+}
+.container_main_collapsed{
+    width: calc(97vw - var(--width-collapsed));
+}
+.container_main_collapsed .contenedor_inicio{
+    width: calc(97vw - var(--width-collapsed));
+}
+.container_main_collapsed .contenedor_inicio #container_form_nav{
+    width: calc(70vw - var(--width-collapsed));
+}
+.container_main_collapsed #banner_inicio #imagenes_rotativas{
+    width: calc(97vw - var(--width-collapsed));
+}
+.container_main_collapsed #banner_inicio #imagenes_rotativas img{
+    width: 700px;
+}
+#master_container{
+    border: none;
+    padding: 0;
+}
+#master_container .contenedor_inicio{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-right: 0;
+    padding: 0;
+}
+#master_container .contenedor_inicio #container_form_nav{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    height: 35px;
+    padding: 5px;
+    margin-right: 0;
+    margin-top: var(--margin-top-header);
+    border: none;
+    background-color: #1a1dec;
+    border-radius: 25px;
+
+} 
+#master_container .contenedor_inicio #container_form_nav .formulario_barra_reserva{
+    display: flex;
+    flex-flow: row wrap;
+
+}
+#master_container #banner_inicio{
+    border: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 25px;
+    border: none;
+
+}
+#master_container #banner_inicio #imagenes_rotativas{
+    border: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 10px 0px;
+    border-bottom: solid 2px rgba(56, 56, 56, 0.664);
+}
+.container_main_collapsed #contenedor_hoteles {
+    width: calc(97vw - var(--width-collapsed) );
+}
+#master_container #contenedor_hoteles{
+    display: flex;
+    flex-flow: row wrap;
+}
+#master_container #contenedor_hoteles #seccion_inicio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    border: none;
+    margin: 25px;
+}
+#master_container #contenedor_hoteles #seccion_inicio .hoteles_galeria{
+    border: solid;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+    align-items: center;
+    padding: 25px;
+    background-color: #1a1dec;
+    color: white;
+    border-radius: 25px;
+}
+#master_container #contenedor_hoteles #seccion_inicio .hoteles_galeria button{
+    border: white solid 2px;
+    padding: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.568);
+}
