@@ -4,6 +4,7 @@
     --width-collapsed: 50px;
     --margin-top-header: 13vh;
 }
+
 .container_main_collapsed{
     width: calc(97vw - var(--width-collapsed));
 }
@@ -119,6 +120,7 @@
     height: 100%;
     object-fit: cover;
     z-index: 30;
+
 }
 .gallery{
     width: 80%;
@@ -139,6 +141,7 @@
     grid-column: span 2;
     height: 200px;
     transition: 0.5s filter;
+
 }
 .gallery_item:hover{
     filter: brightness(0.3);
