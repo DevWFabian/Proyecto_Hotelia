@@ -12,9 +12,11 @@ header{
     margin: 0;
     position: fixed;
     top: 0;
+    z-index: 50;
 }
 
 #barra_navegacion_superior{
+    position: fixed;
     overflow: hidden;
     display: flex;
     background-color: #1a1dec;
