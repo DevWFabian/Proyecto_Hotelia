@@ -4,13 +4,18 @@
     --margin-top-header: 15vh;
 }
 #main-container{
-    padding-left: 5vw;
-    width: calc(100vw - 30vw);
-    border: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: calc(100vw - 200px);
     height: auto;
-    color: rgb(0, 0, 0);
     margin-top:calc(var(--margin-top-header)) ;
     margin-bottom: calc(var(--margin-top-header)) ;
+}
+#main-container #pagina_principal{
+    width: calc(100vw - 30vw);
+    height: auto;
+    color: rgb(0, 0, 0);
 }
 #main-container .principal-title{
     border-bottom: solid 2px var(--hovercolor);
