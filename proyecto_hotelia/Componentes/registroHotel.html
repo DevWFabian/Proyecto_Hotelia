@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/registrohotel.css">
+    <link rel="stylesheet" href="../CSS/barra_desplegable.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+</head>
+<body>
+    <header class="header">
+        <nav id="barra_navegacion_superior" class="barra_nav_collapsed">
+            <ul>
+                <li ><a class="boton_navegacion_barra_superior">HOTELIA</a></li>
+                <li ><a class="boton_navegacion_barra_superior">SOBRE NOSOTROS</a></li>
+            </ul>
+            <div id="logo_titulo_superior">
+                <a href="../index.html" id="logo_principal"><img src="../imagenes/LogoSolo.png" alt="logo_imagen"></a>
+            </div>
+            <ul>
+                <li ><a class="boton_navegacion_barra_superior">RECOMENDADOS</a></li>
+                <li ><a class="boton_navegacion_barra_superior">¿PORQUE HOTELIA?</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- esta es la barra de navegacion lateral -->
+    <section id="sidemenu" class="menu-collapsed">
+        <div id="header">
+            <div id="title"><span>MENU</span></div>
+            <div id="menu-btn">
+                <div class="btn-hamburger"> <img src="../imagenes/flecha.png" alt="icono_flecha"></div>
+            </div>
+        </div>
+        <!-- perfil -->
+        <div id="profile">
+            <div id="photo"><img src="../imagenes/panda.jpg" alt="imagen_usuario_panda"></div>
+            <div id="name"><span>PANDA</span></div>
+        </div>
+        <!-- Items -->
+        <div id="menu-items">
+            <div class="item">
+                <a href="#">
+                    <div class="icon"><img src="../imagenes/perfil.png" alt="icono_perfil"></div>
+                    <div class="title"><span>PERFIL</span></div>
+                </a>
+            </div>
+            <div class="item separator"></div>
+            <div class="item">
+                <a href="#">
+                    <div class="icon"><img src="../imagenes/hotel_icon.png" alt="icono_hotel"></div>
+                    <div class="title"><span>GESTIONAR RESERVAS</span></div>
+                </a>
+            </div>
+            <div class="item separator"></div>
+            <div class="item">
+                <a href="../index.html">
+                    <div class="icon"><img src="../imagenes/Log_Out.png" alt="icono_log_out"></div>
+                    <div class="title"><span>CERRAR SESION</span></div>
+                </a>
+            </div>
+            <div class="item separator"></div>
+        </div>
+    </section>
+
+    <section class="formulario_registro">
+        <h4>REGISTRAR HOTEL</h4>
+        <input class="cuadros" type="text"  placeholder="Nombre">
+        <input class="cuadros" type="text"  placeholder="Descripcion hotel">
+        <input class="cuadros" type="text"  placeholder="Direccion">
+        <input class="cuadros" type="text"  placeholder="Ciudad">
+        
+        <div >
+            <label for="imagen"><span>IMAGEN:</span> </label>
+            <input type="file" name="imagen" id="imagen">
+        </div>
+        <div class="boton">
+        <input  type="button" value="Guardar">
+        </div>
+    </section>
+    <footer id="pie_pagina" class="pie_pagina_collapsed">
+        <div class="title"><span>2022 © Hotelia</span></div>
+    </footer>
+</body>
+</html>
