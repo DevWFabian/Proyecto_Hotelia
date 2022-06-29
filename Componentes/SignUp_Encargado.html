@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/barra_desplegable.css">
+    <link rel="stylesheet" href="../CSS/header.css">
+    <link rel="stylesheet" href="../CSS/SignUp.css">
+    <title>HOTELIA</title>
+    <link rel="icon" href="../imagenes/LogoSolo.png">
+</head>
+
+<body>
+    <header class="header">
+        <nav id="barra_navegacion_superior" class="barra_nav_collapsed">
+            <ul>
+                <li><a class="boton_navegacion_barra_superior">HOTELIA</a></li>
+                <li><a class="boton_navegacion_barra_superior">SOBRE NOSOTROS</a></li>
+            </ul>
+            <div id="logo_titulo_superior">
+                <a href="../index.html" id="logo_principal"><img src="../imagenes/LogoSolo.png" alt="logo_imagen"></a>
+            </div>
+            <ul>
+                <li><a class="boton_navegacion_barra_superior">RECOMENDADOS</a></li>
+                <li><a class="boton_navegacion_barra_superior">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- esta es la barra de navegacion lateral -->
+    <section id="sidemenu" class="menu-collapsed">
+        <div id="header">
+            <div id="title"><span>MENU</span></div>
+            <div id="menu-btn">
+                <div class="btn-hamburger"> <img src="../imagenes/flecha.png" alt="icono_flecha"></div>
+            </div>
+        </div>
+        <!-- perfil -->
+        <div id="profile">
+            <div id="photo"><img src="../imagenes/LogoSolo.png" alt="imagen_usuario_panda"></div>
+            <div id="name"><span>HOTELIA</span></div>
+        </div>
+        <!-- Items -->
+        <div id="menu-items">
+            <div class="item">
+                <a href="LogIn.html">
+                    <div class="icon"><img src="../imagenes/perfil.png" alt="icono_perfil"></div>
+                    <div class="title"><span>logIn</span></div>
+                </a>
+            </div>
+            <div class="item separator"></div>
+            <div class="item">
+                <a href="SignUp.html">
+                    <div class="icon"><img src="../imagenes/SignUp.png" alt="icono_hotel"></div>
+                    <div class="title"><span>SignUp</span></div>
+                </a>
+            </div>
+            <div class="item separator"></div>
+            <div class="item">
+                <a href="SignUp_Encargado.html">
+                    <div class="icon"><img src="../imagenes/hotel_icon.png"></div>
+                    <div class="title"><span>REGISTRA TU HOTEL</span></div>
+                </a>
+            </div>
+            <div class="item separator"></div>
+        </div>
+    </section>
+<!-- este es el container de los inputs  -->
+    <div class="container">
+        <div class="container_form">
+            <div class="title_SignUp">
+                <div class="logo_SignUp"><img src="../imagenes/logo.png" alt="LOGO"></div>
+                <h2>REGISTRATE GRATIS </h2>
+            </div>
+            <form action="inicioEncargado.html" id="formulario_SignUp">
+
+                <div class="contenedor_input_collapsed">
+                    <input type="email" placeholder="EMAIL">
+                    <input type="text" placeholder="NOMBRE"></div>
+                <div class="contenedor_input_collapsed">
+                    <input type="text" placeholder="APELLIDOS">
+                    <input type="text" placeholder="NUMERO DE TELEFONO"></div>
+                <div class="contenedor_input_collapsed">
+                    <input type="text" placeholder="NUMERO DE DOCUMENTO">
+                    <select name="tipo_id" id="tipo_id" class="formulario_contacto cita_medica">
+                        <option value="0" class="formulario_contacto cita_medica" id="primer_opcion">Tipo de
+                            identificacion</option>
+                        <option value="1" class="formulario_contacto cita_medica">Cedula</option>
+                        <option value="2" class="formulario_contacto cita_medica">Tarjeta de identidad</option>
+                    </select>
+                </div>
+                <div class="contenedor_input_collapsed">
+                    <input type="password" placeholder="CONTRASEÑA">
+                    <input type="password" placeholder=" CONFIRMAR CONTRASEÑA">
+                </div>
+                <div class="contenedor_input_collapsed">
+                    <div class="check">
+                        <input type="checkbox" id="check_id">
+                        <label for="checkid">Acepto la <a  href="#">politica de privacidad y condiciones de Uso</a></label>
+                    </div>
+                </div>
+                <div class="contenedor_input_collapsed">
+                    <div class="boton-login">
+                        <input type="submit" value="REGISTRASE">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer id="pie_pagina" class="pie_pagina_collapsed">
+        <div class="title"><span>2022 © Hotelia</span></div>
+    </footer>
+</body>
+
+</html>
+<script type="text/javascript" src="../js/barra_desplegable.js"></script>
