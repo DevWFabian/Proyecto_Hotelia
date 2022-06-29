@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOTELIA</title>
+    <link rel="icon" href="imagenes/LogoSolo.png">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/barra_desplegable.css">
+    <link rel="stylesheet" href="CSS/Inicio.css">
+
+</head>
+
+<body>
+    <header class="header">
+        <nav id="barra_navegacion_superior" class="barra_nav_collapsed">
+            <ul>
+                <li><a href="index.html" class="boton_navegacion_barra_superior">HOTELIA</a></li>
+                <li><a class="boton_navegacion_barra_superior">SOBRE NOSOTROS</a></li>
+            </ul>
+            <div id="logo_titulo_superior">
+                <a href="index.html" id="logo_principal"><img src="imagenes/LogoSolo.png" alt="logo_imagen"></a>
+            </div>
+            <ul>
+                <li><a class="boton_navegacion_barra_superior">RECOMENDADOS</a></li>
+                <li><a class="boton_navegacion_barra_superior">¿PORQUE HOTELIA?</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- esta es la barra de navegacion lateral -->
+    <section id="sidemenu" class="menu-collapsed">
+        <div id="header">
+            <div id="title"><span>MENU</span></div>
+            <div id="menu-btn">
+                <div class="btn-hamburger"> <img src="imagenes/flecha.png" alt="icono_flecha"></div>
+            </div>
+        </div>
+        <!-- perfil -->
+        <div id="profile">
+            <div id="photo"><img src="imagenes/LogoSolo.png" alt="imagen_usuario_panda"></div>
+            <div id="name"><span>HOTELIA</span></div>
+        </div>
+        <!-- Items -->
+        <div id="menu-items">
+            <div class="item">
+                <a href="Componentes/LogIn.html">
+                    <div class="icon"><img src="imagenes/perfil.png" alt="icono_perfil"></div>
+                    <div class="title"><span>logIn</span></div>
+                </a>
+            </div>
+            <div class="item separator"></div>
+            <div class="item">
+                <a href="Componentes/SignUp.html">
+                    <div class="icon"><img src="imagenes/SignUp.png" alt="icono_hotel"></div>
+                    <div class="title"><span>SignUp</span></div>
+                </a>
+            </div>
+            <div class="item separator"></div>
+            <div class="item">
+                <a href="Componentes/SignUp_Encargado.html">
+                    <div class="icon"><img src="imagenes/hotel_icon.png"></div>
+                    <div class="title"><span>REGISTRA TU HOTEL</span></div>
+                </a>
+            </div>
+            <div class="item separator"></div>
+        </div>
+    </section>
+    <section id="master_container" class="container_main_collapsed">
+        <section class="contenedor_inicio">
+            <div id="container_form_nav">
+                <form class="formulario_barra_reserva">
+                    <input type="text" placeholder="¿A Donde Viajas?" class="forma">
+                    <input type="text" placeholder="Fecha de viaje DD/MM/AAAA" class="forma">
+                    <input type="text" placeholder="Fecha de llegada DD/MM/AAAA" class="forma">
+                    <button>BUSCAR</button>
+                </form>
+            </div>
+        </section>
+        <section id="banner_inicio">
+            <main class="gallery">
+                <div class="gallery_item">
+                    <img src="imagenes/hotel1.jpg" alt="">
+                </div>
+                <div class="gallery_item">
+                    <img src="imagenes/hotel2.jpg" alt="">
+                </div>
+                <div class="gallery_item">
+                    <img src="imagenes/hotel3.jpg" alt="">
+                </div>
+                <div class="gallery_item">
+                    <img src="imagenes/hotel4.jpg" alt="">
+                </div>
+                <div class="gallery_item">
+                    <img src="imagenes/hotel5.jpg" alt="">
+                </div>
+                <div class="gallery_item">
+                    <img src="imagenes/slider/bogota1.jpg" alt="">
+                </div>
+                <div class="gallery_item">
+                    <img src="imagenes/slider/bogota2.jpg" alt="">
+                </div>
+                <div class="gallery_item">
+                    <img src="imagenes/slider/bogota3.jpg" alt="">
+                </div>
+                <div class="gallery_item">
+                    <img src="imagenes/slider/img1.jpg" alt="">
+                </div>
+            </main>
+        </section>
+        <section id="contenedor_hoteles">
+            <div id="seccion_hoteles">
+                <section id="seccion_inicio">
+                    <div class="hoteles_galeria">
+                        <div class="division_1">
+                            <h2>HOTEL</h2>
+                        </div>
+                        <img src="imagenes/hotel1.jpg" alt="Hotel" width="200px" class="division_1">
+                        <div class="division_1">
+                            <h3>Descripcion reserva:</h3>
+                        </div>
+                        <div class="division_1">
+                            <h3>Contacto del hotel</h3>
+                        </div>
+                        <button class="division_1">Reservar</button>
+                    </div>
+                </section>
+                <section id="seccion_inicio">
+                    <div class="hoteles_galeria">
+                        <div class="division_1">
+                            <h2>HOTEL</h2>
+                        </div>
+                        <img src="imagenes/hotel2.jpg" alt="Hotel" width="200px" class="division_1">
+                        <div class="division_1">
+                            <h3>Descripcion reserva:</h3>
+                        </div>
+                        <div class="division_1">
+                            <h3>Contacto del hotel</h3>
+                        </div>
+                        <button class="division_1">Reservar</button>
+                    </div>
+                </section>
+                <section id="seccion_inicio">
+                    <div class="hoteles_galeria">
+                        <div class="division_1">
+                            <h2>HOTEL</h2>
+                        </div>
+                        <img src="imagenes/hotel3.jpg" alt="Hotel" width="200px" class="division_1">
+                        <div class="division_1">
+                            <h3>Descripcion reserva:</h3>
+                        </div>
+                        <div class="division_1">
+                            <h3>Contacto del hotel</h3>
+                        </div>
+                        <button class="division_1">Reservar</button>
+                    </div>
+                </section>
+                <section id="seccion_inicio">
+                    <div class="hoteles_galeria">
+                        <div class="division_1">
+                            <h2>HOTEL</h2>
+                        </div>
+                        <img src="imagenes/hotel4.jpg" alt="Hotel" width="200px" class="division_1">
+                        <div class="division_1">
+                            <h3>Descripcion reserva:</h3>
+                        </div>
+                        <div class="division_1">
+                            <h3>Contacto del hotel</h3>
+                        </div>
+                        <button class="division_1">Reservar</button>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </section>
+    <footer id="pie_pagina" class="pie_pagina_collapsed">
+        <div class="title"><span>2022 © Hotelia</span></div>
+    </footer>
+</body>
+
+</html>
+<script type="text/javascript" src="js/barra_desplegable.js"></script>
