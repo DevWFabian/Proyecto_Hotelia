@@ -83,6 +83,3 @@ header {
 .barra_navegacion_superior_expanded {
     width: calc(100vw - var(--width));
 }
-
-
-/* este es el diseño de la cabecera */
