@@ -7,11 +7,11 @@
                         <div class="row ">
                             <div class="col align-self-center">
                                 <div class="card text-center shadow">
-                                    <div class="card-header color-bg bg-secundary bg-opacity-50">
+                                    <div class="card-header bg-info bg-opacity-50">
                                         <h5 class="card-title text-uppercase">Perfil</h5>
                                     </div>
                                     <form class="needs-validation" v-on:submit.prevent="putUsuario">
-                                        <div class="card-body">
+                                        <div class="card-body bg-ligth">
                                             <div class="row justify-content-center">
                                                 <div class="col-md-5 my-1">
                                                     <div class="form-floating ">
@@ -106,8 +106,8 @@
 
                                             </div>
                                         </div>
-                                        <div class="card-footer color-bg ">
-                                            <button class="btn btn-outline-primary text-uppercase m-2"
+                                        <div class="card-footer bg-info bg-opacity-25 ">
+                                            <button class="btn btn-outline-dark text-uppercase m-2"
                                                 type="submit">Registrarse</button>
                                         </div>
                                     </form>

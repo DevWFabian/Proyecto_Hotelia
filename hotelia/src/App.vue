@@ -1,51 +1,55 @@
 <template>
   <header>
     <div id="app" class="app">
-      <nav class="navbar navbar-expand-lg shadow p-3 bg-light ">
+      <nav class="navbar navbar-expand-lg shadow-lg p-3 bg-info bg-opacity-50 ">
         <div class="container-fluid text-center ">
           <div class="col ">
-            <a class="navbar-brand" href="home">
+            <router-link class="navbar-brand" to="/home">
               <img src="@/images/logo2.png" alt="logo hotelia">
-            </a>
+            </router-link>
           </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
             data-bs-target="#navbarSupportedContent">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse offcanvas offcanvas-start text-bg-dark bg-opacity-75"
+          <div
+            class="collapse navbar-collapse offcanvas offcanvas-start d-flex flex-column align-items-stretch text-bg-dark bg-opacity-75"
             data-bs-scroll="true" id="navbarSupportedContent">
             <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasDarkLabel">MENU</h5>
+              <h5 class="offcanvas-title " id="offcanvasDarkLabel">MENU</h5>
+              <button type="button" class="btn-close btn-close-white " data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
             </div>
-            <div class="btn gap-2 d-flex flex-row ">
-              <div >
-              <button type="button" v-on:click="loadHome" class="btn btn-outline-primary text-uppercase">Inicio</button>
+            <ul class="navbar-nav  gap-2 d-flex align-items-stretch justify-content-end">
+              <button type="button" v-on:click="loadHome" class="btn btn-outline-dark text-uppercase">Inicio</button>
+              <button type="button" v-on:click="loadHoteles"
+                class="btn btn-outline-dark text-uppercase">Hoteles</button>
+              <button type="button" v-on:click="loadNosotros"
+                class="btn btn-outline-dark text-uppercase">Nosotros</button>
+              <button type="button" v-if="!is_auth" v-on:click="loadLogIn"
+                class="btn btn-outline-dark text-uppercase">Ingresar</button>
+              <button type="button" v-if="!is_auth" v-on:click="loadSignUp"
+                class="btn btn-outline-dark text-uppercase">Registrarse</button>
+              <button type="button" v-if="is_auth" v-on:click="loadPerfil"
+                class="btn btn-outline-dark text-uppercase">Perfil</button>
+              <button type="button" v-if="is_auth" v-on:click="logOut"
+                class="btn btn-outline-dark text-uppercase">Cerrar Sesion</button>
+              <div class="dropdown-center" v-if="is_auth">
+                <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  MENU
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+                  <li><button v-if="is_auth" v-on:click="loadPerfil"
+                      class="dropdown-item text-uppercase">Perfil</button></li>
+                  <li><button v-if="is_auth" v-on:click="logOut" class="dropdown-item text-uppercase">Cerrar
+                      Sesion</button></li>
+                </ul>
               </div>
-              <div > <button type="button" v-if="!is_auth" v-on:click="loadLogIn"
-                class="btn btn-outline-primary text-uppercase">Alojamientos</button>
-                </div>
+            </ul>
 
-              <div > <button type="button" v-if="!is_auth" v-on:click="loadLogIn"
-                class="btn btn-outline-primary text-uppercase">Sobre Nosotros</button>
-                </div>
 
-              <div > <button type="button" v-if="!is_auth" v-on:click="loadLogIn"
-                class="btn btn-outline-primary text-uppercase">Ingresar</button>
-                </div>
 
-              <div > <button type="button" v-if="!is_auth" v-on:click="loadSignUp"
-                class="btn btn-outline-primary text-uppercase">Registrarse</button>
-                </div>
-
-              <div > <button type="button" v-if="is_auth" v-on:click="loadPerfil"
-                class="btn btn-outline-primary text-uppercase">Perfil</button>
-                </div>
-
-              <div > <button type="button" v-if="is_auth" v-on:click="logOut"
-                class="btn btn-outline-primary text-uppercase">Cerrar Sesion</button>
-                </div>
-
-            </div>
           </div>
         </div>
 
@@ -79,6 +83,16 @@
       loadSignUp: function () {
         this.$router.push({
           name: "SignUp"
+        })
+      },
+      loadHoteles: function () {
+        this.$router.push({
+          name: "Hoteles"
+        })
+      },
+      loadNosotros: function () {
+        this.$router.push({
+          name: "Nosotros"
         })
       },
     }

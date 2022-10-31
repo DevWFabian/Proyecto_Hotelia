@@ -3,8 +3,8 @@
         <div class="row">
             <div class="col">
                 <div class="card text-center shadow m-5">
-                    <div class="card-header ">
-                        <h4 class="card-title text-uppercase">Busca hotel</h4>
+                    <div class="card-header bg-info bg-opacity-50">
+                        <h4 class="card-title text-uppercase">Alojamientos</h4>
                     </div>
                     <div class="card-body">
                         <div class="input-group mb-3">
@@ -35,9 +35,9 @@
 
                         </div>
                     </div>
-                    <div class="card-footer text-muted">
-                        <button class="btn btn-outline-primary text-uppercase" type="button"
-                            id="button-addon2">reservar</button>
+                    <div class="card-footer bg-info bg-opacity-25">
+                        <button class="btn btn-outline-dark text-uppercase" type="button"
+                            id="button-addon2">buscar</button>
                     </div>
                 </div>
             </div>
