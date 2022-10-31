@@ -30,10 +30,6 @@
                 class="btn btn-outline-dark text-uppercase">Ingresar</button>
               <button type="button" v-if="!is_auth" v-on:click="loadSignUp"
                 class="btn btn-outline-dark text-uppercase">Registrarse</button>
-              <button type="button" v-if="is_auth" v-on:click="loadPerfil"
-                class="btn btn-outline-dark text-uppercase">Perfil</button>
-              <button type="button" v-if="is_auth" v-on:click="logOut"
-                class="btn btn-outline-dark text-uppercase">Cerrar Sesion</button>
               <div class="dropdown-center" v-if="is_auth">
                 <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown"
                   aria-expanded="false">
@@ -42,8 +38,10 @@
                 <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
                   <li><button v-if="is_auth" v-on:click="loadPerfil"
                       class="dropdown-item text-uppercase">Perfil</button></li>
-                  <li><button v-if="is_auth" v-on:click="logOut" class="dropdown-item text-uppercase">Cerrar
-                      Sesion</button></li>
+                  <li><button v-if="is_auth" v-on:click="loadReserva"
+                      class="dropdown-item text-uppercase">Reservas</button></li>
+                  <li><button v-if="is_auth" v-on:click="logOut" 
+                  class="dropdown-item text-uppercase">Cerrar Sesion</button></li>
                 </ul>
               </div>
             </ul>
@@ -55,7 +53,7 @@
 
       </nav>
       <div class="main-component">
-        <router-view v-on:completedLogIn="completedLogIn" v-on:completedSignUp="completedSignUp">
+        <router-view v-on:completedLogin="completedLogin" v-on:completedSignUp="completedSignUp">
         </router-view>
       </div>
     </div>
@@ -70,6 +68,21 @@
       }
     },
     methods: {
+      verifyAuth: function () {
+        this.is_auth = localStorage.getItem('isAuth') || false
+        if (this.is_auth == false)
+          this.$router.push({
+            name: 'Home'
+          })
+        else
+          this.$router.push({
+            name: 'Home'
+          })
+      },
+      logOut: function () {
+        localStorage.clear();
+        this.verifyAuth();
+      },
       loadHome: function () {
         this.$router.push({
           name: "Home"
@@ -95,6 +108,26 @@
           name: "Nosotros"
         })
       },
+      completedLogin: function (data) {
+        localStorage.setItem('isAuth', true);
+        localStorage.setItem('username', data.username);
+        this.verifyAuth();
+      },
+      completedSignUp: function(data){
+        localStorage.setItem('isAuth',true)
+        localStorage.setItem('username',data.username)
+        localStorage.setItem('nombre',data.Nombre)
+        localStorage.setItem('apellido',data.Apellido)
+        localStorage.setItem('telefono',data.Telefono)
+        localStorage.setItem('genero',data.Genero)
+        localStorage.setItem('tipodocumento',data.TipoDocumento)
+        localStorage.setItem('numerodocumento',data.NumeroDocumento)
+        localStorage.setItem('direccion',data.Direccion)
+        localStorage.setItem('ciudad',data.Ciudad)
+        localStorage.setItem('fechanacimiento',data.FechaNacimiento)
+        localStorage.setItem('correo',data.Correo)
+        this.verifyAuth();
+      }
     }
   }
 </script>
