@@ -108,6 +108,9 @@
           name: "Nosotros"
         })
       },
+      loadPerfil: function(){
+        this.$router.push({name:"Perfil"})
+      },
       completedLogin: function (data) {
         localStorage.setItem('isAuth', true);
         localStorage.setItem('username', data.username);
