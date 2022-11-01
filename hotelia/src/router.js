@@ -9,6 +9,7 @@ import SignUp from './views/SignUp.vue'
 import Hoteles from './views/Hoteles.vue'
 import Nosotros from './views/Nosotros.vue'
 import Perfil from './views/Perfil.vue'
+import RegistroHotel from './views/RegistroHotel.vue'
 const routes = [{
   path: '/',
   name: 'root',
@@ -38,6 +39,10 @@ const routes = [{
   path: '/perfil',
   name: 'Perfil',
   component: Perfil
+},{
+  path: '/registro_hotel',
+  name: 'RegistroHotel',
+  component: RegistroHotel
 }
 ]
 const router = createRouter({

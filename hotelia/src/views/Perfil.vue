@@ -35,7 +35,7 @@
     </div>
     <div class="card-footer text-muted">
         <button class="btn btn-outline-danger">Delete Post</button>
-        <button class="btn btn-outline-primary">Edit Post</button>
+        <router-link class="btn btn-outline-primary" to="/registro_hotel" >Edit Post</router-link>
     </div>
   </div>
 </div>
