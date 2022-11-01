@@ -8,7 +8,8 @@ import Login from './views/Login.vue'
 import SignUp from './views/SignUp.vue'
 import Hoteles from './views/Hoteles.vue'
 import Nosotros from './views/Nosotros.vue'
-import Admin from './views/Admin.vue'
+import Perfil from './views/Perfil.vue'
+import RegistroHotel from './views/RegistroHotel.vue'
 const routes = [{
   path: '/',
   name: 'root',
@@ -35,9 +36,13 @@ const routes = [{
   name: 'Nosotros',
   component: Nosotros
 },{
-  path: '/admin',
-  name: 'Admin',
-  component: Admin
+  path: '/perfil',
+  name: 'Perfil',
+  component: Perfil
+},{
+  path: '/registro_hotel',
+  name: 'RegistroHotel',
+  component: RegistroHotel
 }
 ]
 const router = createRouter({
