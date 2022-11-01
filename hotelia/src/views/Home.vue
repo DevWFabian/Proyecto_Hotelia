@@ -1,6 +1,6 @@
 <template>
     <div class="container ">
-        <div class="row">
+        <div class="row ">
             <div class="col">
                 <div class="card text-center shadow m-5">
                     <div class="card-header bg-info bg-opacity-50">
