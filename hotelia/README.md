@@ -1,19 +1,3 @@
 # hotelia
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+VERSION 1
+![image](https://user-images.githubusercontent.com/107563311/199155056-98403be3-f04a-4933-83a3-3adbee9211ae.png)
