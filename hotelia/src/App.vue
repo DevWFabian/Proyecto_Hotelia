@@ -114,6 +114,8 @@
       completedLogin: function (data) {
         localStorage.setItem('isAuth', true);
         localStorage.setItem('username', data.username);
+        localStorage.setItem('token_access',data.token_access);
+        localStorage.setItem('token_refresh',data.token_refresh);
         this.verifyAuth();
       },
       completedSignUp: function(data){
