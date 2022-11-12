@@ -42,6 +42,7 @@
     </div>
 </template>
 <script>
+import axios from 'axios'
 export default {
     name:'Login',
     data: function(){
@@ -54,11 +55,26 @@ export default {
     },
     methods:{
         processLoginUser: function(){
-            let dataLogin={
-                username: this.user.username
-            }
-            this.$emit('completedLogin',dataLogin)
-        }
+            axios.post(
+                "https://back-end-hotelia.herokuapp.com/login/",
+                this.user,{headers:{}}
+            )
+            .then((result)=>{
+                let dataLogin={
+                    username: this.user.username,
+                    token_access: result.data.access,
+                    token_refresh: result.data.refresh,
+                }
+                this.$emit('completedLogin',dataLogin)
+            })
+            .catch((error) => {
+
+                    if (error.response.status == "401")
+                        console.log(error)
+                        alert("ERROR 401: Credenciales Incorrectas.");
+                });
+        }       
     }
 }
+
 </script>
