@@ -146,27 +146,30 @@
                         Direccion: "",
                         Ciudad: "",
                         FechaNacimiento: "",
-                        Correo: ""
+                        Correo: "",
+                        rol:"Cliente"
                     }
                 }
             }
         },
         methods: {
             processSignUpUser: function () {
-                let dataSignUp = {
-                    username: this.user.username,
-                    Nombre: this.user.account.Nombre,
-                    Apellido: this.user.account.Apellido,
-                    Telefono: this.user.account.Telefono,
-                    Genero: this.user.account.Genero,
-                    TipoDocumento: this.user.account.TipoDocumento,
-                    NumeroDocumento: this.user.account.NumeroDocumento,
-                    Direccion: this.user.account.Direccion,
-                    Ciudad: this.user.account.Ciudad,
-                    FechaNacimiento: this.user.account.FechaNacimiento,
-                    Correo: this.user.account.Correo,
-                }
-                this.$emit('completedSignUp', dataSignUp)
+                axios.post(
+                    "https://back-end-hotelia.herokuapp.com/user/",
+                    this.user,{headers:{}}
+                )
+                .then((result)=>{
+                    let dataSignUp = {
+                        username: this.user.username,
+                        token_access: result.data.access,
+                        token_refresh: result.data.refresh,
+                    }
+                    this.$emit('completedSignUp', dataSignUp)
+                })
+                .catch((error)=>{
+                    console.log(error)
+                    alert('Fallo en el registro intente de nuevo')
+                })               
             }
         }
     }

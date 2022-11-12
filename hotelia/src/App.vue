@@ -114,22 +114,14 @@
       completedLogin: function (data) {
         localStorage.setItem('isAuth', true);
         localStorage.setItem('username', data.username);
+        localStorage.setItem('token_access',data.token_access);
+        localStorage.setItem('token_refresh',data.token_refresh);
+        alert('Autenticacion Exitosa')
         this.verifyAuth();
       },
       completedSignUp: function(data){
-        localStorage.setItem('isAuth',true)
-        localStorage.setItem('username',data.username)
-        localStorage.setItem('nombre',data.Nombre)
-        localStorage.setItem('apellido',data.Apellido)
-        localStorage.setItem('telefono',data.Telefono)
-        localStorage.setItem('genero',data.Genero)
-        localStorage.setItem('tipodocumento',data.TipoDocumento)
-        localStorage.setItem('numerodocumento',data.NumeroDocumento)
-        localStorage.setItem('direccion',data.Direccion)
-        localStorage.setItem('ciudad',data.Ciudad)
-        localStorage.setItem('fechanacimiento',data.FechaNacimiento)
-        localStorage.setItem('correo',data.Correo)
-        this.verifyAuth();
+        alert('Registro exitoso')
+        this.completedLogin(data)
       }
     }
   }
