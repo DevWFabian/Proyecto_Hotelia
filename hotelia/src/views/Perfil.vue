@@ -57,6 +57,14 @@
           </ul>
           <div class="tab-content shadow-sm" id="myTabContent">
             <div class="tab-pane fade" id="Hotel-tab-pane" role="tabpanel" aria-labelledby="Hotel-tab" tabindex="0">
+              <div class="card m-3 shadow-sm">
+                <div class="card-body ">
+                  <div class="row justify-content-end">
+                    <div class="col-md-4">
+                      <button class="btn btn-outline-success text-uppercase" v-on:click="loadRegistroHotel">Añadir hotel</button></div>
+                  </div>
+                </div>
+              </div>
               <div class="card m-3 shadow-sm" v-for="hotel in hoteles" :key="hotel.id">
                 <div class="row justify-content-between">
                   <div class="col-md-2 align-self-center">
@@ -75,11 +83,15 @@
                             <div class="col-lg-2 ">
                               <button class="btn btn-outline-dark text-uppercase" type="button">editar</button></div>
                             <div class="col-lg-3 ">
-                              <button class="btn btn-outline-dark text-uppercase" type="button">Habitaciones</button></div>
+                              <button class="btn btn-outline-dark text-uppercase" type="button">Habitaciones</button>
+                            </div>
                             <div class="col-lg-2 ">
-                              <button class="btn btn-outline-dark text-uppercase" v-on:click="loadPerfilHotel(hotel.id,hotel.nombre_hotel)" type="button">ver</button></div>
+                              <button class="btn btn-outline-dark text-uppercase"
+                                v-on:click="loadPerfilHotel(hotel.id,hotel.nombre_hotel)" type="button">ver</button>
+                            </div>
                             <div class="col-lg-3 ">
-                              <button class="btn btn-outline-dark text-uppercase" type="button">Desactivar</button></div>
+                              <button class="btn btn-outline-dark text-uppercase" type="button">Desactivar</button>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -101,7 +113,7 @@
     name: 'Perfil',
     data: function () {
       return {
-        hoteles:[],
+        hoteles: [],
         user: {
           username: "",
           account: {
@@ -149,22 +161,29 @@
             this.$emit('logOut');
           })
       },
-      getDataHotelAdmin: async function(){
+      getDataHotelAdmin: async function () {
         let token = localStorage.getItem('token_access');
         let userId = jwt_decode(token).user_id.toString();
         axios.get(`https://back-end-hotelia.herokuapp.com/hotel/user/${userId}`)
-        .then((response)=>{
-          this.hoteles=response.data
-        })
-        .catch(() => {
+          .then((response) => {
+            this.hoteles = response.data
+          })
+          .catch(() => {
             this.$emit('logOut');
-        });
-        },
-      loadPerfilHotel: function(idHotel,nomHotel){
-        localStorage.setItem('idHotel',idHotel)
-        localStorage.setItem('nombreHotel',nomHotel)
+          });
+      },
+      loadRegistroHotel: function () {
+        this.$router.push({
+          name: 'RegistroHotel'
+        })
+      },
+      loadPerfilHotel: function (idHotel, nomHotel) {
+        localStorage.setItem('idHotel', idHotel)
+        localStorage.setItem('nombreHotel', nomHotel)
         console.log(localStorage.getItem('nombreHotel'))
-        this.$router.push({name:"PerfilHotel"})
+        this.$router.push({
+          name: "PerfilHotel"
+        })
       },
       verifyToken: function () {
         return axios.post("https://back-end-hotelia.herokuapp.com/refresh/", {

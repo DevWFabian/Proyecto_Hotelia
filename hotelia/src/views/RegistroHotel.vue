@@ -9,32 +9,39 @@
                     <form v-on:submit.prevent="postHotelRegistro">
                         <div class="card-body p-5">
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <label class="form-label">NOMBRE DEL HOTEL</label>
-                                    <input type="text" class="form-control" value=" " required>
+                                    <input type="text" v-model="hotel.nombre_hotel" class="form-control"  required>
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label class="form-label">DIRECCIÓN</label>
+                                    <input type="text" v-model="hotel.direccion_hotel" maxlength="35" class="form-control"  required>
 
                                 </div>
                                 <div class="col-md-6">
-                                    <label class="form-label">DIRECCIÓN</label>
-                                    <input type="text" class="form-control" value=" " required>
+                                    <label class="form-label">Telefono</label>
+                                    <input type="text" v-model="hotel.telefono_hotel" maxlength="15" class="form-control"  required>
 
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <label class="form-label">DESCRIPCIÓN DEL
                                     HOTEL</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                                <textarea class="form-control" v-model="hotel.descripcion_hotel" id="exampleFormControlTextarea1" rows="4"></textarea>
                             </div>
                             <div class="row">
                                 <div class="col-md-6">
                                     <label class="form-label">CIUDAD</label>
-                                    <input type="text" class="form-control" required>
+                                    <input type="text" v-model="hotel.ciudad_hotel" class="form-control" required>
 
                                 </div>
 
                                 <div class="col-md-6">
-                                    <label class="form-label">TELEFONO</label>
-                                    <input type="text" maxlength="15" class="form-control" required>
+                                    <label class="form-label">PAIS</label>
+                                    <input type="text" v-model="hotel.pais_hotel"  class="form-control" required>
 
                                 </div>
                             </div>
@@ -95,7 +102,20 @@ import jwt_decode from "jwt-decode"
                 this.verifyToken();
                 let token = localStorage.getItem('token_access');
                 this.hotel.user = jwt_decode(token).user_id.toString();
-                console.log(this.hotel.user)
+                axios.post(
+                    'https://back-end-hotelia.herokuapp.com/hotel/',
+                    this.hotel,{headers:{}}
+                )
+                .then(()=>{
+                    alert('Registro Exitoso')
+                    this.$router.push({
+                    name: 'Perfil'
+                    })
+                })
+                .catch((error)=>{
+                    console.log(error)
+                    alert('Fallo en el registro intente de nuevo')
+                })
             },
             verifyToken: function () {
                 return axios.post("https://back-end-hotelia.herokuapp.com/refresh/", {

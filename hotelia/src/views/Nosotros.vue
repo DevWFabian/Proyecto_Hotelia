@@ -25,7 +25,7 @@
         <div class="row my-5" v-if="!isAuth">
             <div class="col text-center">
                 <h3 class="text-info">¿QUIERES QUE TU HOTEL SE PUBLIQUE EN HOTELIA?</h3>
-                <button class="btn btn-info" v-on:click="loadRegistroHotel" type="button">Click Aqui</button>
+                <button class="btn btn-info" v-on:click="loadRegistroEncargado" type="button">Click Aqui</button>
             </div>
         </div>
     </div>
@@ -43,7 +43,7 @@ export default {
             this.isAuth = localStorage.getItem('isAuth') || false
             console.log(this.isAuth)
         },
-        loadRegistroHotel: function(){
+        loadRegistroEncargado: function(){
             this.$router.push({
             name: 'SignUpEncargado'
           })
