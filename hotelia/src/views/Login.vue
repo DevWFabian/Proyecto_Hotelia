@@ -1,5 +1,5 @@
 <template>
-    <div class="container-fluid text-center color-bg">
+    <div class="container-fluid text-center">
         <div class="row">
             <div class="col ">
                 <div class="container bg-body rounded my-5 shadow ">
@@ -10,7 +10,7 @@
                         <div class="col-6 align-self-center">
                             <div class="d-flex justify-content-center">
                                 <div class="card w-75 my-5">
-                                    <div class="card-header text-dark color-bg bg-primary bg-opacity-50">
+                                    <div class="card-header text-dark bg-info bg-opacity-50">
                                         <h4 class="card-title">LOGIN</h4>
                                     </div>
                                     <form v-on:submit.prevent="processLoginUser">
@@ -27,8 +27,8 @@
                                                 <label for="floatingPassword">Contraseña</label>
                                             </div>
                                         </div>
-                                        <div class="card-footer bg-primary bg-opacity-25">
-                                            <button  class="btn btn-outline-primary  text-uppercase my-2" type="submit">login</button>
+                                        <div class="card-footer bg-info bg-opacity-25">
+                                            <button  class="btn btn-outline-dark  text-uppercase my-2" type="submit">login</button>
                                         </div>
                                     </form>
                                 </div>

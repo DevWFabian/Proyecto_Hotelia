@@ -149,7 +149,7 @@ import axios from 'axios'
                         Ciudad: "",
                         FechaNacimiento: "",
                         Correo: "",
-                        Rol: "Cliente"
+                        Rol: "Encargado"
                     }
                 }
             }

@@ -1,7 +1,7 @@
 <template>
   <header>
     <div id="app" class="app">
-      <nav class="navbar navbar-expand-lg shadow-lg p-3 bg-info bg-opacity-50 ">
+      <nav class="navbar navbar-expand-lg shadow p-3 bg-info bg-opacity-50 ">
         <div class="container-fluid text-center ">
           <div class="col ">
             <router-link class="navbar-brand" to="/home">
@@ -123,6 +123,9 @@
         alert('Registro exitoso')
         this.completedLogin(data)
       }
-    }
+    },
+    created: function(){
+    this.verifyAuth()
+  }
   }
 </script>

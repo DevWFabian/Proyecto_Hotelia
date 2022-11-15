@@ -10,6 +10,8 @@ import Hoteles from './views/Hoteles.vue'
 import Nosotros from './views/Nosotros.vue'
 import Perfil from './views/Perfil.vue'
 import RegistroHotel from './views/RegistroHotel.vue'
+import PerfilHotel from './views/PerfilHotel.vue'
+import SignUpEncargado from './views/SignUpEncargado.vue'
 const routes = [{
   path: '/',
   name: 'root',
@@ -43,6 +45,14 @@ const routes = [{
   path: '/registro_hotel',
   name: 'RegistroHotel',
   component: RegistroHotel
+},{
+  path: `/hotel`,
+  name: 'PerfilHotel',
+  component: PerfilHotel
+},{
+  path: '/signup/encargado',
+  name:'SignUpEncargado',
+  component: SignUpEncargado
 }
 ]
 const router = createRouter({

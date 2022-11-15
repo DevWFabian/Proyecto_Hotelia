@@ -10,8 +10,8 @@
             </div>
         </div>
         <div class="row my-5">
-                <div class="col-6">
-                    <img src="@/images/camasNosotros.jpg" class="img-fluid w-50">
+                <div class="col-5">
+                    <img src="@/images/camasNosotros.jpg" class="img-fluid w-75">
                 </div>
                 <div class="col-6">
                     <h1 class="title section text-info">Comunicate con nosotros:</h1>
@@ -22,11 +22,35 @@
                     <p>Facebook: Hotelia39</p>
                 </div>
         </div>
-        <div class="row my-5">
+        <div class="row my-5" v-if="!isAuth">
             <div class="col text-center">
                 <h3 class="text-info">¿QUIERES QUE TU HOTEL SE PUBLIQUE EN HOTELIA?</h3>
-                <button class="btn btn-info" type="button">Click Aqui</button>
+                <button class="btn btn-info" v-on:click="loadRegistroHotel" type="button">Click Aqui</button>
             </div>
         </div>
     </div>
 </template>
+<script>
+export default {
+    name:'Nosotros',
+    data: function(){
+        return{
+            isAuth:false
+        }
+    },
+    methods:{
+        verifyAuth: async function () {
+            this.isAuth = localStorage.getItem('isAuth') || false
+            console.log(this.isAuth)
+        },
+        loadRegistroHotel: function(){
+            this.$router.push({
+            name: 'SignUpEncargado'
+          })
+        }            
+    },
+    created: function(){
+    this.verifyAuth()
+  }
+}
+</script>

@@ -1,55 +1,31 @@
 <template>
     <div class="container-fluid  my-5">
-        <div class="card m-5 p-3" >
+        <div class="card m-5 p-3" v-for="hotel in hoteles" :key="hotel.id">
             <div class="row g-0">
                 <div class="col-3">
                     <img src="@/images/LogoSolo.png" class=" card-img-top w-75 img-fluid" alt="">
                 </div>
                 <div class="col-5">
                     <div class="card-body">
-                        <h5 class="card-title">HOTEL</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
+                        <h5 class="card-title">{{hotel.nombre_hotel}}</h5>
+                        <p class="card-text">{{hotel.descripcion_hotel}}</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-4 ">
+                                <button class="btn btn-outline-dark text-uppercase"
+                                    v-on:click="loadPerfilHotel(hotel.id,hotel.nombre_hotel)" type="button">Ver Detalles</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-3">
                     <div class="card-body">
                         <ul class="list-group list-group-flush">
-                        <li class="list-group-item">PRECIO NOCHE</li>
-                        <li class="list-group-item">$0.00</li>
-                    </ul>
-                    <div class="card-body">
-                        <a href="#" class="card-link">RESERVAR</a>
-                        <a href="#" class="card-link">MAS INFORMACION</a>
-                    </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card m-5 p-3" >
-            <div class="row g-0">
-                <div class="col-3">
-                    <img src="@/images/LogoSolo.png" class=" card-img-top w-75 img-fluid" alt="">
-                </div>
-                <div class="col-5">
-                    <div class="card-body">
-                        <h5 class="card-title">HOTEL</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card-body">
-                        <ul class="list-group list-group-flush">
-                        <li class="list-group-item">PRECIO NOCHE</li>
-                        <li class="list-group-item">$0.00</li>
-                    </ul>
-                    <div class="card-body">
-                        <a href="#" class="card-link">RESERVAR</a>
-                        <a href="#" class="card-link">MAS INFORMACION</a>
-                    </div>
+                            <li class="list-group-item">Direccion: {{hotel.direccion_hotel}}</li>
+                            <li class="list-group-item">Ciudad: {{hotel.ciudad_hotel}}</li>
+                            <li class="list-group-item">Pais: {{hotel.pais_hotel}}</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -57,3 +33,37 @@
     </div>
 
 </template>
+<script>
+    import axios from 'axios'
+    export default {
+        name: 'Hoteles',
+        data: function () {
+            return {
+                hoteles: [],
+
+            }
+        },
+        methods: {
+            getDataHotel: async function () {
+                axios.get('https://back-end-hotelia.herokuapp.com/hotel/')
+                    .then((response) => {
+                        this.hoteles = response.data
+                        console.log(this.hoteles)
+                    })
+            },
+            loadPerfilHotel: function (idHotel, nomHotel) {
+                localStorage.setItem('idHotel', idHotel)
+                localStorage.setItem('nombreHotel', nomHotel)
+                console.log(localStorage.getItem('nombreHotel'))
+                this.$router.push({
+                    name: "PerfilHotel"
+                })
+            },
+
+
+        },
+        created: async function () {
+            this.getDataHotel();
+        }
+    }
+</script>
